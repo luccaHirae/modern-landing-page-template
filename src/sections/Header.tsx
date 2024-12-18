@@ -48,7 +48,12 @@ export const Header = () => {
 
   return (
     <>
-      <header className="border-b border-gray-200/20 relative z-40">
+      <header
+        className={twMerge(
+          "border-b border-gray-200/20 relative z-40",
+          isMobileNavOpen && "fixed top-0 left-0 right-0 bg-gray-950"
+        )}
+      >
         <div className="container">
           <div className="h-18 lg:h-20 flex items-center justify-between">
             <div className="flex gap-4 items-center">
